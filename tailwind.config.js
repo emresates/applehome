@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin')
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: [
@@ -17,7 +17,9 @@ module.exports = {
       animation: {
         moveUp: "moveUp 2.5s ease forwards",
       },
-      fontFamily: {},
+      fontFamily: {
+        source: ["Source Sans 3", "sans-serif"],
+      },
     },
   },
   plugins: [
