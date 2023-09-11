@@ -4,6 +4,7 @@ import Hero from "@/components/heroSection";
 import PhoneModel from "@/components/3dmodel";
 import Design from "@/components/designSection";
 import Display from "@/components/displaySection";
+import Processor from "@/components/processorSection";
 
 const HomeContainer = () => {
   return (
@@ -13,6 +14,7 @@ const HomeContainer = () => {
       {/* <PhoneModel /> */}
       <Design />
       <Display />
+      <Processor />
     </div>
   );
 };
