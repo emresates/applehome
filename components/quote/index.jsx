@@ -1,8 +1,32 @@
-import React from "react";
+"use client";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useLayoutEffect, useRef } from "react";
 
 const Quote = () => {
+  gsap.registerPlugin(ScrollTrigger);
+  const sectionRef = useRef(null);
+
+  useLayoutEffect(() => {
+    let sectionElement = sectionRef.current;
+    let trigger = ScrollTrigger.create({
+      trigger: sectionElement,
+      start: "top top",
+      pin: true,
+      pinSpacing: false,
+      // markers: true,
+    });
+
+    return () => {
+      if (trigger) trigger.kill();
+    };
+  }, []);
+
   return (
-    <div className="relative flex h-screen w-screen items-center justify-center">
+    <div
+      ref={sectionRef}
+      className="fixed top-0 flex h-screen w-screen items-center justify-center"
+    >
       <div className="flex h-full w-full flex-col items-center justify-center bg-gray-950 text-white">
         <p className="relative h-10 w-1/2 overflow-hidden text-3xl">
           <span className="animation-delay-0 absolute translate-y-10 animate-moveUp bg-gradient-to-br from-red-500 to-blue-500 bg-clip-text text-transparent">
