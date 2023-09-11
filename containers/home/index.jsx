@@ -3,6 +3,7 @@ import Quote from "@/components/quote";
 import Hero from "@/components/heroSection";
 import PhoneModel from "@/components/3dmodel";
 import Design from "@/components/designSection";
+import Display from "@/components/displaySection";
 
 const HomeContainer = () => {
   return (
@@ -11,6 +12,7 @@ const HomeContainer = () => {
       <Hero />
       {/* <PhoneModel /> */}
       <Design />
+      <Display />
     </div>
   );
 };
