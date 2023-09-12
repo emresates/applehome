@@ -5,6 +5,7 @@ import PhoneModel from "@/components/3dmodel";
 import Design from "@/components/designSection";
 import Display from "@/components/displaySection";
 import Processor from "@/components/processorSection";
+import Battery from "@/components/batterySection";
 
 const HomeContainer = () => {
   return (
@@ -15,6 +16,7 @@ const HomeContainer = () => {
       <Design />
       <Display />
       <Processor />
+      <Battery />
     </div>
   );
 };
