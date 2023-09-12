@@ -23,7 +23,7 @@ const Battery = () => {
             start: "top center",
             end: "bottom center",
             scrub: true,
-            markers: true,
+            // markers: true,
           },
           opacity: 1,
         },

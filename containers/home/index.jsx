@@ -1,11 +1,12 @@
 import React from "react";
 import Quote from "@/components/quote";
-import Hero from "@/components/heroSection";
+import Hero from "@/sections/heroSection";
 import PhoneModel from "@/components/3dmodel";
-import Design from "@/components/designSection";
-import Display from "@/components/displaySection";
-import Processor from "@/components/processorSection";
-import Battery from "@/components/batterySection";
+import Design from "@/sections/designSection";
+import Display from "@/sections/displaySection";
+import Processor from "@/sections/processorSection";
+import Battery from "@/sections/batterySection";
+import Colors from "@/sections/colorSection";
 
 const HomeContainer = () => {
   return (
@@ -17,6 +18,7 @@ const HomeContainer = () => {
       <Display />
       <Processor />
       <Battery />
+      <Colors />
     </div>
   );
 };

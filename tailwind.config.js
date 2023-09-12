@@ -5,6 +5,7 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./sections/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -25,6 +26,10 @@ module.exports = {
       },
       fontFamily: {
         source: ["Source Sans 3", "sans-serif"],
+      },
+      backgroundColor: {
+        bgblue: "rgba(155, 181, 206, 0.8)",
+        bgblueVis: "rgba(155, 181, 206, 0.4)",
       },
     },
   },
