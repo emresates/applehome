@@ -34,7 +34,10 @@ const Battery = () => {
   }, []);
 
   return (
-    <div className="relative flex h-screen w-screen items-center justify-end bg-slate-100">
+    <div
+      id="battery"
+      className="relative flex h-screen w-screen items-center justify-end bg-slate-100"
+    >
       <h1 className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 text-9xl font-medium capitalize">
         Go all day with single charge...
       </h1>

@@ -13,7 +13,7 @@ const HomeContainer = () => {
     <div className="overflow-hidden">
       <Quote />
       <Hero />
-      {/* <PhoneModel /> */}
+      <PhoneModel />
       <Design />
       <Display />
       <Processor />

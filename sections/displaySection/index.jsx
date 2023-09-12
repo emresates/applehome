@@ -46,7 +46,7 @@ const Display = () => {
           inventore expedita.
         </p>
       </div>
-      <div className="mb-20 flex w-full -rotate-12 select-none flex-col items-center justify-center">
+      <div className="z-10 mb-20 flex w-full -rotate-12 select-none flex-col items-center justify-center">
         <h1
           ref={textOne}
           className="bg-gradient-to-br from-red-500 to-blue-500 bg-clip-text p-2 font-source text-8xl text-transparent"

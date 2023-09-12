@@ -1,9 +1,14 @@
 "use client";
 
+import { Model2 } from "@/components/3dmodel/Scene2";
+import { Environment, useGLTF } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import gsap from "gsap";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { Suspense, useLayoutEffect, useRef } from "react";
 
 const Colors = () => {
+  const { nodes, materials } = useGLTF("/scene-transformed.glb");
+
   const sectionRef = useRef(null);
   const rightRef = useRef(null);
   const leftRef = useRef(null);
@@ -16,6 +21,7 @@ const Colors = () => {
     let textElement = textRef.current;
 
     let updateColor = (color, text, rgbColor) => {
+      materials.Body.color.set(color);
       textElement.innerText = text;
       textElement.style.color = color;
       rightElement.style.backgroundColor = `rgba(${rgbColor}, 0.4)`;
@@ -95,10 +101,17 @@ const Colors = () => {
       >
         Sierra Blue
       </h1>
-      <div
-        ref={rightRef}
-        className="bg-bgblueVis relative flex h-full w-1/2"
-      ></div>
+      <div ref={rightRef} className="bg-bgblueVis relative flex h-full w-1/2">
+        <Canvas camera={{ fov: 6.5 }}>
+          <ambientLight intensity={1.25} />
+          <directionalLight intensity={0.4} />
+          <Suspense fallback={null}>
+            <Model2 />
+          </Suspense>
+          <Environment preset="night" />
+          {/* <OrbitControls /> */}
+        </Canvas>
+      </div>
     </div>
   );
 };
