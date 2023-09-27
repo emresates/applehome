@@ -6,7 +6,7 @@ import Design from "@/sections/designSection";
 import Display from "@/sections/displaySection";
 import Processor from "@/sections/processorSection";
 import Battery from "@/sections/batterySection";
-import Colors from "@/sections/colorSection";
+import Camera from "@/sections/cameraSection";
 
 const HomeContainer = () => {
   return (
@@ -18,7 +18,7 @@ const HomeContainer = () => {
       <Display />
       <Processor />
       <Battery />
-      <Colors />
+      <Camera />
     </div>
   );
 };
